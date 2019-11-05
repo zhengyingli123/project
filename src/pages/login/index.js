@@ -20,12 +20,14 @@ class Login extends React.Component{
                         // webStorage.setItem('rootList',data.rootList)
                         // webStorage.setItem('token',data.token)
                         // webStorage.setItem('uid',data.uid)
-                        this.props.history.push('/admin/home')
+                        message.success('登陆成功,2s后跳转首页')
+                        setTimeout(()=>{
+                            this.props.history.push('/admin/home')
+                        },2000)
                     }else{
-
+                        message.error("登录失败，请重新登录");
                     }
                 })
-                message.success('登陆成功,3s后跳转首页')
             }
         })
     }
