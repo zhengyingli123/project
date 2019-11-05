@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './router'
+// import App from './router'
+import App from "./pages/register"
 import axios from './utils/axios';
 import * as serviceWorker from './serviceWorker';
 
