@@ -26,7 +26,6 @@ const root=[
             {name:"添加菜品",path:"/admin/foodadd",key:"/admin/foodadd"},
             {name:"更新菜品",path:"/admin/foodupdate",key:"/admin/foodupdate"},
             {name:"删除菜品",path:"/admin/fooddel",key:"/admin/fooddel"},
-            {name:"展示菜品",path:"/admin/foodlist",key:"/admin/foodlist"},
             {name:"搜索菜品",
                 path:"/admin/foodget",
                 key:"/admin/foodget",

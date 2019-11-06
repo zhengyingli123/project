@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox,message,Card} from 'antd'; //antd的form组件
 import Style from './index.module.less';
-// import webStorage from '../../utils/webstorage'
+import webStorage from '../../utils/webstorage'
 
 class Login extends React.Component{
     submit=()=>{
@@ -18,7 +18,7 @@ class Login extends React.Component{
                     if(data.err===0){
                         //存值
                         // webStorage.setItem('rootList',data.rootList)
-                        // webStorage.setItem('token',data.token)
+                        webStorage.setItem('token',data.token)
                         // webStorage.setItem('uid',data.uid)
                         message.success('登陆成功,2s后跳转首页')
                         setTimeout(()=>{
