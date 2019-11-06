@@ -2,7 +2,7 @@ import React from 'react'
 // import Style from 'index.module.less'
 import { Layout, Menu, Icon,Dropdown,Button} from 'antd';
 import CustomSider from '../../components/customSider'
-// import Modal from '../../components/modal/modal'
+import Modal from '../../components/modal/modal'
 import {withRouter} from 'react-router-dom'
 const { Header, Content, Footer, Sider } = Layout;
 class Admin extends React.Component{
@@ -42,7 +42,7 @@ class Admin extends React.Component{
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
                 </Layout>
-                {/*<Modal></Modal>*/}
+                <Modal></Modal>
             </Layout>
         )
     }
