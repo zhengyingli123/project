@@ -8,7 +8,10 @@ import Style from './modal.module.less'
 class Modal extends React.Component{
 
     render(){
-        console.log(this,'modal');
+<<<<<<< HEAD
+=======
+        // console.log(this,'modal');
+>>>>>>> 3c8c130b3ebc6782b7b228033b0d64d82a213f46
         let {tokenModal}=this.props
         return(
             <Fragment>

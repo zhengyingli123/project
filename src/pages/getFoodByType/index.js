@@ -30,8 +30,9 @@ class GetFoodByType extends React.Component{
         },
         {
             title: '图片',
-            dataIndex: 'img',
+            dataIndex: 'img',//img: "/public/img/1573093922641.jpg"
             key: 'img',
+            render: (record) => <img src={'http://localhost:3000'+record} alt="" width="100px"/>
         }
     ];
     constructor(){
