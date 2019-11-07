@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input,Card,Spin,Table,Pagination,message,Popconfirm,Button} from 'antd';
+import { Input,Card,Spin,Table,Pagination} from 'antd';
 const { Search } = Input;
 class GetFoodByType extends React.Component{
     columns = [

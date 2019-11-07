@@ -1,6 +1,6 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 // import webstorage from '../../utils/webstorage'
 const { SubMenu } = Menu;
 const root=[
@@ -24,11 +24,10 @@ const root=[
         key:"/admin/food",
         children:[
             {name:"添加菜品",path:"/admin/foodadd",key:"/admin/foodadd"},
-            {name:"更新菜品",path:"/admin/foodupdate",key:"/admin/foodupdate"},
-            {name:"删除菜品",path:"/admin/fooddel",key:"/admin/fooddel"},
+            {name:"菜品列表",path:"/admin/foodget",key:"/admin/foodget"},
             {name:"搜索菜品",
-                path:"/admin/foodget",
-                key:"/admin/foodget",
+                path:"/admin/foodsearch",
+                key:"/admin/foodsearch",
                 children:[
                     {name:"按类型搜索",path:"/admin/getfoodbytype",key:"/admin/user/root"},
                     {name:"按关键字搜索",path:"/admin/getfoodbykey",key:"/admin/user/info"}
