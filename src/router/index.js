@@ -2,6 +2,7 @@ import React from 'react';
 import {HashRouter,Switch,Route,Redirect} from 'react-router-dom'
 
 import Login from '../pages/login'
+import Reg from '../pages/register'
 import Admin from '../pages/admin'
 import Home from '../pages/home'
 import User from '../pages/user'
@@ -22,6 +23,7 @@ class RootRoute extends React.Component{
                 <Switch>
                     <Redirect exact from='/' to='/login'></Redirect>
                     <Route path='/login' component={Login}></Route>
+                    <Route path='/Reg' component={Reg}></Route>
                     <Route path='/admin' component={()=>{
                         return(
                             <Admin>

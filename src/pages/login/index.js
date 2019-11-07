@@ -67,7 +67,7 @@ class Login extends React.Component{
                     })(<Checkbox>Remember me</Checkbox>)}
                     <a className="login-form-forgot" href="">
                         Forgot password
-                    </a>Or <a href="">register now!</a>
+                    </a>Or <a href="http://localhost:3001/#/Reg">register now!</a>
                     <Button type="primary" onClick={this.submit} className="login-form-button">
                         Log in
                     </Button>
