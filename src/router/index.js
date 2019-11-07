@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter,Switch,Route,Redirect} from 'react-router-dom'
 
 import Login from '../pages/login'
-import Reg from '../pages/register'
+// import Reg from '../pages/register'
 import Admin from '../pages/admin'
 import Home from '../pages/home'
 import User from '../pages/user'
@@ -13,7 +13,9 @@ import FoodUpdate from '../pages/foodupdate/update'
 import GetFoodByKey from '../pages/getFoodByKey'
 import GetFoodByType from '../pages/getFoodByType'
 import GetFood from '../pages/getFood'
+import Loadable from "../utils/loadeable.js"
 
+const Reg =Loadable(()=>import("../pages/register"))
 class RootRoute extends React.Component{
     render(){
         return(
