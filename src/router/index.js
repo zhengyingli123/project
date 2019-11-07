@@ -10,7 +10,7 @@ import UserList from '../pages/userList'
 import Logout from '../pages/logout'
 import Food from '../pages/food'
 import FoodAdd from '../pages/foodadd'
-import FoodUpdate from '../pages/foodupdate'
+import FoodUpdate from '../pages/getFood/index'
 import FoodDel from '../pages/fooddel'
 import GetFoodByKey from '../pages/getFoodByKey'
 import GetFoodByType from '../pages/getFoodByType'
@@ -32,7 +32,6 @@ class RootRoute extends React.Component{
                                 <Route path='/admin/user' component={User}></Route>
                                 <Route path='/admin/userlist' component={UserList}></Route>
                                 <Route path='/admin/logout' component={Logout}></Route>
-                                <Route path='/admin/food' component={Food}></Route>
                                 <Route path='/admin/foodadd' component={FoodAdd}></Route>
                                 <Route path='/admin/foodupdate' component={FoodUpdate}></Route>
                                 <Route path='/admin/fooddel' component={FoodDel}></Route>
