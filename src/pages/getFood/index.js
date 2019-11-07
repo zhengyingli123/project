@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input,Card,Spin,Table,Pagination,message,Popconfirm,Button} from 'antd';
+import { Card,Spin,Table,Pagination,message,Popconfirm,Button} from 'antd';
 import FoodUpdate from '../foodupdate/update'
 import Webstorage from '../../utils/webstorage';
 
@@ -34,7 +34,6 @@ class GetFood extends React.Component{
             title: '图片',
             dataIndex: 'img',
             key: 'img',
-
             render:(record)=><img src={'http://localhost:3000'+record} width="100px" />
         },
         {
@@ -85,7 +84,7 @@ class GetFood extends React.Component{
             dataSource:[],
             spinning:true,
             total:0,//总数据条数
-            pageSize:5,//每页的条数
+            pageSize:3,//每页的条数
             page:1,//当前页
             updateShow:false
         }

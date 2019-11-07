@@ -23,7 +23,7 @@ class Reg extends React.Component {
                 // console.log(data)
                 alert(data.msg)
                 // console.log(this)
-                if(data.err==0){
+                if(data.err===0){
                     this.props.history.push("Login")
                 }
             })

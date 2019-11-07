@@ -1,10 +1,12 @@
 import React from 'react'
 // import Style from 'index.module.less'
-import { Layout, Menu, Icon,Dropdown,Button} from 'antd';
+import { Layout, Menu} from 'antd';
 import CustomSider from '../../components/customSider'
 import Modal from '../../components/modal/modal'
 import {withRouter} from 'react-router-dom'
+
 const { Header, Content, Footer, Sider } = Layout;
+
 class Admin extends React.Component{
     renderMenu=()=>{
         return(
@@ -32,7 +34,7 @@ class Admin extends React.Component{
                     <CustomSider></CustomSider>
                 </Sider>
                 <Layout style={{ marginLeft: 200 }}>
-                    <Header style={{ background: '#fff', padding: 0 , textAlign:'center',fontSize:'20px'}}>
+                    <Header style={{ background: '#fff', padding: 0 , textAlign:'center',fontSize:'40px',lineHeight:'100px',height:'100px'}}>
                         小仙女餐厅管理系统
                     </Header>
                     <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
@@ -40,7 +42,7 @@ class Admin extends React.Component{
                             {this.props.children}
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                    <Footer style={{ textAlign: 'center' }}>Ant Design ©2019 Created by 小仙女</Footer>
                 </Layout>
                 <Modal></Modal>
             </Layout>

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card,message,Input,Button} from 'antd'
 import Style from './index.module.less'
+import Webstorage from '../../utils/webstorage'
 
 /* 
 1.点击修改按钮，显示修改组件
@@ -45,7 +46,25 @@ class FoodUpdate extends React.Component{
             }
         })
     }
+    submitimg=()=>{
+        let {img}=this.state
+        let imgs=this.refs.file.files[0]
+        let formdata=new FormData()
+        formdata.append('hehe',imgs)
+        // console.log(formdata.get('hehe'))
 
+        this.$axios.post('http://localhost:3000/file/upload',formdata)
+            .then((data)=>{
+                console.log(data.img)
+                if(data.err===0){
+                    message.success('上传成功')
+                    this.setState({img:data.img})
+                    Webstorage.setItem('img',data.img)
+                }else {
+                    message.error('上传失败')
+                }
+            })
+    }
     render(){
         let {typeid,typename,name,price,desc,img}=this.state
         return(
@@ -76,10 +95,10 @@ class FoodUpdate extends React.Component{
                         this.setState({desc:e.target.value})
                     }}/>
                     <br/>
-                    <label htmlFor="">图片</label>
-                    <Input type="text" value={img} onChange={(e)=>{
-                        this.setState({img:e.target.value})
-                    }}/>
+                    <label style={{marginRight:8}}>图片</label>
+                    <input type="file" ref='file'/>
+                    <Button onClick={this.submitimg}>提交</Button><br/>
+                    <img src={'http://localhost:3000'+this.state.img} alt="" style={{width:280,height:200,marginTop:8}}/>
                     <br/>
 
                     <Button onClick={this.update}>修改</Button>

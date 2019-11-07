@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input,Card,Spin,Table,Pagination,message,Popconfirm,Button} from 'antd';
+import { Input,Card,Spin,Table,Pagination} from 'antd';
 const { Search } = Input;
 class GetFoodByType extends React.Component{
     columns = [
@@ -41,7 +41,7 @@ class GetFoodByType extends React.Component{
             dataSource:[],
             spinning:true,
             total:0,//总数据条数
-            pageSize:5,//每页的条数
+            pageSize:3,//每页的条数
             page:1,//当前页
         }
     }

@@ -19,7 +19,8 @@ class Login extends React.Component{
                         //存值
                         // webStorage.setItem('rootList',data.rootList)
                         webStorage.setItem('token',data.token)
-                        // webStorage.setItem('uid',data.uid)
+                        // webStorage.setItem('_id',data._id)
+                        // webStorage.setItem('password',data.password)
                         message.success('登陆成功,2s后跳转首页')
                         setTimeout(()=>{
                             this.props.history.push('/admin/home')
