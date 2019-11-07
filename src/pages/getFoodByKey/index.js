@@ -30,8 +30,9 @@ class GetFoodByKey extends React.Component{
         },
         {
             title: '图片',
-            dataIndex: 'img',
+            dataIndex:'img',
             key: 'img',
+            render: (record) => <img src={'http://localhost:3000'+record} alt="" width="100px"/>
         }
     ];
     constructor(){
@@ -48,7 +49,6 @@ class GetFoodByKey extends React.Component{
         this.getFoodByPage(1,this.state.pageSize);
     }
     getFoodByType(kw){
-        // let kw=typename;
         this.$axios.post('http://localhost:3000/food/getInfoByKw',{kw}).then((data)=>{
             console.log(data);
             this.setState({dataSource:data.list,spinning:false,total:data.list.length})
@@ -65,6 +65,7 @@ class GetFoodByKey extends React.Component{
                 if (Math.ceil(data.info.count/this.state.pageSize)<page){
                     tmppage=Math.ceil(data.info.count/this.state.pageSize)
                 }
+
                 this.setState({dataSource:data.info.list,total:data.info.count,spinning:false,page:tmppage})
             }
         })
